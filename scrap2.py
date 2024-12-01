@@ -11,8 +11,8 @@ options.add_argument("--headless")  # Run in headless mode to not open a browser
 options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-# URL of the website with the search for "i9"
-url = "https://barbechli.tn/search;text=i9;subcategories=components;availabilities=on_stock,on_command"
+# URL of the website with the search for "Ryzen 5 3400G"
+url = "https://barbechli.tn/search;text=Ryzen 5 3400G;subcategories=components;availabilities=on_stock,on_command"
 
 # Open the webpage
 driver.get(url)
@@ -39,7 +39,7 @@ for product in product_cards:
         print(f"Error extracting data for a product: {e}")
 
 # Save the results to a JSON file
-with open('i9_products.json', 'w', encoding='utf-8') as f:
+with open('Ryzen 5 3400G_products.json', 'w', encoding='utf-8') as f:
     json.dump(products, f, ensure_ascii=False, indent=4)
 
 # Close the driver
